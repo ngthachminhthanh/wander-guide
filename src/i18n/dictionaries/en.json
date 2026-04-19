@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "map": "Route Map",
+    "experiences": "Experiences"
+  },
+  "home": {
+    "travelToJapan": "Travel to Japan",
+    "startJourney": "Start Journey",
+    "essenceExperiences": "Essence of Experiences",
+    "essenceDesc": "The timeless values that create the unique appeal of Japanese culture.",
+    "topDestinations": "Top Destinations",
+    "topDestinationsDesc": "Locations that no traveler should miss.",
+    "viewAll": "View all",
+    "exploreNow": "Explore now",
+    "mapTitle": "Journey Map",
+    "mapDesc": "Plan your trip easier with a detailed map integrated with Google Maps. Discover ideal routes and destinations.",
+    "openMap": "Open Explorer Map"
+  },
+  "map": {
+    "title": "Exploration Route",
+    "searchPlaceholder": "Search for locations...",
+    "suggestedLocations": "Suggested locations",
+    "routeSuggestion": "Route suggestion",
+    "routeDesc": "Optimize your journey.",
+    "viewDetails": "View route details",
+    "directions": "Directions"
+  },
+  "destinations": {
+    "title": "Discover Destinations",
+    "desc": "Japan spans many regions with unique cultural colors. Choose a destination to begin.",
+    "explore": "Explore",
+    "generalInfo": "General Information",
+    "generalInfoDesc": "This place offers a wonderful experience where tradition meets modern innovation. Dedicate at least 3 days to explore its hidden beauty.",
+    "takeMeHere": "Take me here",
+    "areaMap": "Area Map"
+  },
+  "clock": {
+    "vnTime": "VN Time",
+    "jpTime": "JP Time"
+  },
+  "experience": {
+    "overview": "Overview",
+    "highlights": "Highlights",
+    "backHome": "HOME",
+    "exploreDestinations": "Explore Destinations"
+  },
+  "footer": {
+    "desc": "Discover the traditional beauty and tranquility of Japan with Wander Guide.",
+    "explore": "Explore",
+    "topDestinations": "Top Destinations",
+    "nature": "Nature",
+    "culture": "Arts & Culture",
+    "food": "Food & Drinks",
+    "support": "Support",
+    "travelGuide": "Travel Guide",
+    "faq": "FAQ",
+    "routeMap": "Route Map",
+    "connect": "Connect",
+    "newsletter": "Subscribe to receive the latest updates on destinations.",
+    "emailPlaceholder": "Your email here...",
+    "send": "Send",
+    "copyright": "Wander Guide. All rights reserved."
+  }
+}

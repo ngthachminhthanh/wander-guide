@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "home": "Trang chủ",
+    "destinations": "Điểm đến",
+    "map": "Bản đồ lộ trình",
+    "experiences": "Trải nghiệm"
+  },
+  "home": {
+    "travelToJapan": "Du lịch Nhật Bản",
+    "startJourney": "Bắt đầu hành trình",
+    "essenceExperiences": "Tinh Hoa Trải Nghiệm",
+    "essenceDesc": "Những giá trị trường tồn tạo nên sức hút độc đáo của văn hoá Nhật Bản.",
+    "topDestinations": "Điểm Đến Hàng Đầu",
+    "topDestinationsDesc": "Những địa danh không thể bỏ qua đối với bất kỳ du khách nào.",
+    "viewAll": "Xem tất cả",
+    "exploreNow": "Khám phá ngay",
+    "mapTitle": "Bản Đồ Hành Trình",
+    "mapDesc": "Lên kế hoạch cho chuyến đi của bạn dễ dàng hơn với bản đồ chi tiết tích hợp google map. Khám phá các cung đường và điểm đến lý tưởng.",
+    "openMap": "Mở Bản Đồ Khám Phá"
+  },
+  "map": {
+    "title": "Lộ Trình Khám Phá",
+    "searchPlaceholder": "Tìm kiếm địa điểm...",
+    "suggestedLocations": "Địa điểm gợi ý",
+    "routeSuggestion": "Gợi ý lộ trình",
+    "routeDesc": "Tối ưu hóa hành trình của bạn.",
+    "viewDetails": "Xem chi tiết tuyến đường",
+    "directions": "Chỉ đường"
+  },
+  "destinations": {
+    "title": "Khám Phá Điểm Đến",
+    "desc": "Nhật Bản trải dài với rất nhiều địa phương mang màu sắc văn hoá độc đáo. Chọn một điểm đến để bắt đầu.",
+    "explore": "Khám phá",
+    "generalInfo": "Thông tin chung",
+    "generalInfoDesc": "Nơi đây mang đến trải nghiệm tuyệt vời giao thoa giữa truyền thống và sự đổi mới hiện đại. Hãy dành ít nhất 3 ngày để khám phá hết vẻ đẹp tiềm ẩn của điểm đến này.",
+    "takeMeHere": "Đưa tôi đến đây",
+    "areaMap": "Bản Đồ Khu Vực"
+  },
+  "clock": {
+    "vnTime": "Giờ Việt Nam",
+    "jpTime": "Giờ Nhật Bản"
+  },
+  "experience": {
+    "overview": "Tổng quan",
+    "highlights": "Điểm nổi bật",
+    "backHome": "TRANG CHỦ",
+    "exploreDestinations": "Khám phá các điểm đến"
+  },
+  "footer": {
+    "desc": "Khám phá vẻ đẹp truyền thống và sự tĩnh lặng của Nhật Bản cùng Wander Guide.",
+    "explore": "Khám Phá",
+    "topDestinations": "Điểm đến nổi bật",
+    "nature": "Thiên nhiên",
+    "culture": "Văn hóa & Nghệ thuật",
+    "food": "Ẩm thực",
+    "support": "Hỗ Trợ",
+    "travelGuide": "Cẩm nang du lịch",
+    "faq": "Câu hỏi thường gặp",
+    "routeMap": "Bản đồ lộ trình",
+    "connect": "Kết Nối",
+    "newsletter": "Đăng ký để nhận thông tin mới nhất về các địa điểm.",
+    "emailPlaceholder": "Email của bạn...",
+    "send": "Gửi",
+    "copyright": "Wander Guide. Đã bảo đảm mọi quyền lợi."
+  }
+}

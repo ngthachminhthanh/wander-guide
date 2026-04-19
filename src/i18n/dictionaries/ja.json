@@ -1,0 +1,66 @@
+{
+  "navbar": {
+    "home": "ホーム",
+    "destinations": "観光地",
+    "map": "ルートマップ",
+    "experiences": "体験"
+  },
+  "home": {
+    "travelToJapan": "日本への旅行",
+    "startJourney": "旅を始める",
+    "essenceExperiences": "体験の神髄",
+    "essenceDesc": "日本文化のユニークな魅力を生み出す不朽の価値。",
+    "topDestinations": "人気の観光地",
+    "topDestinationsDesc": "どの旅行者も見逃せない場所。",
+    "viewAll": "すべて見る",
+    "exploreNow": "今すぐ探索",
+    "mapTitle": "ジャニーマップ",
+    "mapDesc": "Googleマップと統合された詳細な地図で旅行の計画を簡単にします。理想的なルートと目的地を発見してください。",
+    "openMap": "マップを開く"
+  },
+  "map": {
+    "title": "探索ルート",
+    "searchPlaceholder": "場所を検索...",
+    "suggestedLocations": "おすすめの場所",
+    "routeSuggestion": "ルートの提案",
+    "routeDesc": "あなたの旅を最適化します。",
+    "viewDetails": "ルートの詳細を見る",
+    "directions": "行き方"
+  },
+  "destinations": {
+    "title": "目的地を発見",
+    "desc": "日本はユニークな文化色を持つ多くの地域にまたがっています。始める目的地を選んでください。",
+    "explore": "探索する",
+    "generalInfo": "一般情報",
+    "generalInfoDesc": "ここは伝統と現代の革新が交差する素晴らしい体験を提供します。その隠された美しさを探求するために少なくとも3日を割り当ててください。",
+    "takeMeHere": "ここへ連れて行って",
+    "areaMap": "エリアマップ"
+  },
+  "clock": {
+    "vnTime": "ベトナム時間",
+    "jpTime": "日本時間"
+  },
+  "experience": {
+    "overview": "概要",
+    "highlights": "ハイライト",
+    "backHome": "ホーム",
+    "exploreDestinations": "目的地を探す"
+  },
+  "footer": {
+    "desc": "ワンダーガイドで日本の伝統的な美しさと静けさを発見してください。",
+    "explore": "探索",
+    "topDestinations": "人気の観光地",
+    "nature": "自然",
+    "culture": "芸術と文化",
+    "food": "飲食",
+    "support": "サポート",
+    "travelGuide": "旅行ガイド",
+    "faq": "よくある質問",
+    "routeMap": "ルートマップ",
+    "connect": "つながる",
+    "newsletter": "最新の目的地情報を入手するために登録してください。",
+    "emailPlaceholder": "メールアドレス...",
+    "send": "送信",
+    "copyright": "ワンダーガイド。全著作権所有。"
+  }
+}
