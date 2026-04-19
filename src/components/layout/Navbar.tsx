@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Map, MapPin, Tent, Menu, X, Home, Compass, Leaf, Palette, Utensils } from "lucide-react";
+import { Map, MapPin, Tent, Menu, X, Home, Compass, Leaf, Palette, Utensils, BookOpen, HelpCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/components/providers/i18n-provider";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
@@ -38,6 +38,8 @@ export function Navbar() {
     { href: `/${locale}/experiences/nature`, label: t.footer?.nature || "Thiên nhiên", icon: <Leaf className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/experiences/culture`, label: t.footer?.culture || "Văn hóa & Nghệ thuật", icon: <Palette className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/experiences/food`, label: t.footer?.food || "Ẩm thực", icon: <Utensils className="mr-2 h-4 w-4" /> },
+    { href: `/${locale}/travel-guide`, label: t.footer?.travelGuide || "Cẩm nang du lịch", icon: <BookOpen className="mr-2 h-4 w-4" /> },
+    { href: `/${locale}/faq`, label: t.footer?.faq || "Câu hỏi thường gặp", icon: <HelpCircle className="mr-2 h-4 w-4" /> },
   ];
 
   return (
@@ -77,8 +79,8 @@ export function Navbar() {
                       navigationMenuTriggerStyle(),
                       "bg-transparent transition-colors outline-none",
                       isSolid 
-                        ? "hover:bg-primary/10 focus:bg-primary/10 data-[active]:bg-primary/10 text-foreground focus:text-foreground" 
-                        : "hover:bg-white/20 focus:bg-white/20 data-[active]:bg-white/20 text-white hover:text-white focus:text-white data-[active]:text-white font-medium drop-shadow-sm"
+                        ? "hover:bg-primary/10 focus:bg-primary/10 data-active:bg-primary/10 data-active:hover:bg-primary/10 text-foreground focus:text-foreground hover:text-foreground data-active:text-foreground data-active:hover:text-foreground" 
+                        : "hover:bg-white/20 focus:bg-white/20 data-active:bg-white/20 data-active:hover:bg-white/20 text-white hover:text-white focus:text-white data-active:text-white data-active:hover:text-white font-medium drop-shadow-sm"
                     )}>
                       {link.icon}
                       {link.label}
@@ -91,8 +93,8 @@ export function Navbar() {
                   <NavigationMenuTrigger className={cn(
                       "bg-transparent transition-colors outline-none",
                       isSolid 
-                        ? "hover:bg-primary/10 focus:bg-primary/10 data-[state=open]:bg-primary/10 text-foreground focus:text-foreground" 
-                        : "hover:bg-white/20 focus:bg-white/20 data-[state=open]:bg-white/20 text-white hover:text-white focus:text-white data-[state=open]:text-white font-medium drop-shadow-sm"
+                        ? "hover:bg-primary/10 focus:bg-primary/10 data-open:bg-primary/10 data-popup-open:bg-primary/10 text-foreground focus:text-foreground hover:text-foreground data-open:text-foreground data-popup-open:text-foreground" 
+                        : "hover:bg-white/20 focus:bg-white/20 data-open:bg-white/20 data-popup-open:bg-white/20 data-open:hover:bg-white/20 data-popup-open:hover:bg-white/20 text-white hover:text-white focus:text-white data-open:text-white data-popup-open:text-white data-open:hover:text-white data-popup-open:hover:text-white font-medium drop-shadow-sm"
                     )}>
                     <Compass className="mr-2 h-4 w-4" />
                     {t.footer?.explore || "Khám Phá"}
@@ -147,10 +149,10 @@ export function Navbar() {
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "100vh" }}
+            animate={{ opacity: 1, height: "calc(100vh - 72px)" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-0 left-0 w-full bg-background border-b shadow-xl overflow-hidden pt-24 px-6 flex flex-col space-y-6"
+            className="lg:hidden absolute top-[72px] left-0 w-full bg-background border-b shadow-xl overflow-y-auto overflow-x-hidden pt-6 pb-12 px-6 flex flex-col space-y-6"
           >
             <div className="flex justify-center mb-4">
               <DualClock />

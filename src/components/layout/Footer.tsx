@@ -35,8 +35,8 @@ export function Footer() {
         <div>
           <h4 className="font-semibold mb-4 text-primary">{t.footer?.support || "Hỗ Trợ"}</h4>
           <ul className="space-y-2 text-sm text-gray-400">
-            <li><Link href="#" className="hover:text-white transition">{t.footer?.travelGuide || "Cẩm nang du lịch"}</Link></li>
-            <li><Link href="#" className="hover:text-white transition">{t.footer?.faq || "Câu hỏi thường gặp"}</Link></li>
+            <li><Link href={`/${locale}/travel-guide`} className="hover:text-white transition">{t.footer?.travelGuide || "Cẩm nang du lịch"}</Link></li>
+            <li><Link href={`/${locale}/faq`} className="hover:text-white transition">{t.footer?.faq || "Câu hỏi thường gặp"}</Link></li>
             <li><Link href={`/${locale}/map`} className="hover:text-white transition">{t.footer?.routeMap || "Bản đồ lộ trình"}</Link></li>
           </ul>
         </div>

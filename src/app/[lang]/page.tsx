@@ -67,14 +67,34 @@ export default function Home() {
             <p className="text-xl md:text-3xl text-gray-200 mb-8 drop-shadow-lg font-light">
               {heroSlides[currentSlide].subtitle[locale]}
             </p>
-            <Button size="lg" className="rounded-full shadow-lg text-lg px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground border-0" asChild>
-              <Link href={`/${locale}/destinations`}>{t.home.startJourney}</Link>
-            </Button>
+            <div className="flex items-center justify-center space-x-3 md:space-x-4">
+              <Button
+                variant="outline"
+                size="icon"
+                className="md:hidden rounded-full border-0 bg-black/20 hover:bg-black/50 text-white hover:text-white backdrop-blur-sm h-14 w-14 shrink-0 transition-all"
+                onClick={prevSlide}
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </Button>
+
+              <Button size="lg" className="rounded-full shadow-lg text-lg px-6 md:px-8 h-14 bg-primary hover:bg-primary/90 text-primary-foreground border-0" asChild>
+                <Link href={`/${locale}/destinations`}>{t.home.startJourney}</Link>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="icon"
+                className="md:hidden rounded-full border-0 bg-black/20 hover:bg-black/50 text-white hover:text-white backdrop-blur-sm h-14 w-14 shrink-0 transition-all"
+                onClick={nextSlide}
+              >
+                <ChevronRight className="h-6 w-6" />
+              </Button>
+            </div>
           </motion.div>
         </div>
 
-        {/* Slider Controls */}
-        <div className="absolute z-20 top-1/2 left-4 md:left-8 -translate-y-1/2">
+        {/* Desktop Slider Controls */}
+        <div className="hidden md:block absolute z-20 top-1/2 left-8 -translate-y-1/2">
           <Button
             variant="outline"
             size="icon"
@@ -84,7 +104,7 @@ export default function Home() {
             <ChevronLeft className="h-8 w-8" />
           </Button>
         </div>
-        <div className="absolute z-20 top-1/2 right-4 md:right-8 -translate-y-1/2">
+        <div className="hidden md:block absolute z-20 top-1/2 right-8 -translate-y-1/2">
           <Button
             variant="outline"
             size="icon"

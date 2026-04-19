@@ -14,7 +14,7 @@ export default function FestivalsPage() {
       en: "Immerse yourself in the vibrant atmosphere of thousands of traditional festivals happening year-round across Japan.",
       ja: "日本中で年間を通じて開催される何千もの伝統的な祭りの活気に満ちた雰囲気に浸ってください。"
     },
-    image: "https://images.unsplash.com/photo-1512401666699-2a912bb0ffed?q=80&w=2000&auto=format&fit=crop",
+    image: "https://trieuhaotravel.vn/Uploads/files/nhat_le.png_large.webp",
     highlights: {
       vi: [
         "Mặc Yukata tham gia lễ hội pháo hoa mùa hè",
@@ -43,7 +43,7 @@ export default function FestivalsPage() {
   };
 
   return (
-    <ExperienceDetails 
+    <ExperienceDetails
       title={data.title[locale]}
       japaneseTitle={data.japaneseTitle}
       description={data.description[locale]}

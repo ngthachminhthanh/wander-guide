@@ -15,13 +15,11 @@ export default function MapPage() {
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(selectedLocation.mapQuery)}&t=&z=10&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <div className="flex flex-col h-[calc(100vh-64px)] mt-16 overflow-hidden">
-      <div className="flex flex-col md:flex-row h-full">
-        
+    <div className="flex flex-col-reverse lg:flex-row min-h-[calc(100vh-56px)] mt-14">
         {/* Sidebar */}
-        <div className="w-full md:w-96 bg-card border-r flex flex-col z-20 shadow-xl">
-          <div className="p-6 border-b space-y-4">
-            <h1 className="text-2xl font-bold flex items-center">
+        <div className="w-full lg:w-[400px] bg-card border-r flex flex-col z-20 shadow-xl lg:h-[calc(100vh-56px)] lg:sticky lg:top-14 shrink-0">
+          <div className="p-4 md:p-6 border-b space-y-4 shrink-0">
+            <h1 className="text-xl md:text-2xl font-bold flex items-center">
               <Navigation className="mr-2 text-primary" /> {t.map.title}
             </h1>
             <div className="relative">
@@ -30,7 +28,7 @@ export default function MapPage() {
             </div>
           </div>
 
-          <ScrollArea className="flex-grow">
+          <ScrollArea className="flex-grow h-auto max-h-[60vh] lg:max-h-none">
             <div className="p-4 space-y-3">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-2 mb-2">
                 {t.map.suggestedLocations}
@@ -57,14 +55,14 @@ export default function MapPage() {
             </div>
           </ScrollArea>
 
-          <div className="p-6 border-t bg-muted/50 hidden md:block">
+          <div className="p-4 md:p-6 border-t bg-muted/50 hidden md:block shrink-0">
             <div className="flex items-center space-x-4 mb-4">
-               <div className="h-12 w-12 shrink-0 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Info className="text-primary w-6 h-6" />
+               <div className="h-10 w-10 md:h-12 md:w-12 shrink-0 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Info className="text-primary w-5 h-5 md:w-6 md:h-6" />
                </div>
                <div>
                   <h4 className="font-bold text-sm">{t.map.routeSuggestion}</h4>
-                  <p className="text-xs text-muted-foreground">{t.map.routeDesc}</p>
+                  <p className="text-xs text-muted-foreground hidden lg:block">{t.map.routeDesc}</p>
                </div>
             </div>
             <Button className="w-full" variant="outline">{t.map.viewDetails}</Button>
@@ -72,13 +70,13 @@ export default function MapPage() {
         </div>
 
         {/* Map Area */}
-        <div className="flex-grow relative h-full">
+        <div className="w-full h-[55vh] lg:h-auto lg:flex-grow relative z-10 bg-muted shrink-0 lg:shrink">
           <motion.div 
             key={selectedLocation.id}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-full h-full"
+            className="w-full h-full absolute inset-0"
           >
             <iframe 
               src={mapUrl}
@@ -92,14 +90,14 @@ export default function MapPage() {
           </motion.div>
 
           {/* Floating UI on Map */}
-          <div className="absolute bottom-6 left-4 right-4 md:bottom-10 md:left-auto md:right-10 md:w-80 z-30">
+          <div className="absolute bottom-6 left-4 right-4 md:bottom-10 md:left-auto md:right-10 md:w-80 z-30 pointer-events-none">
             <motion.div 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               key={`card-${selectedLocation.id}`}
-              className="bg-card/90 backdrop-blur-xl border border-border/50 p-6 rounded-3xl shadow-2xl"
+              className="bg-card/90 backdrop-blur-xl border border-border/50 p-5 rounded-3xl shadow-2xl pointer-events-auto"
             >
-              <h2 className="text-2xl font-bold mb-2">{selectedLocation.name[locale]}</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2">{selectedLocation.name[locale]}</h2>
               <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{selectedLocation.description[locale]}</p>
               <div className="flex space-x-2">
                  <Button className="flex-grow rounded-full shadow-lg h-12" asChild>
@@ -116,7 +114,6 @@ export default function MapPage() {
             </motion.div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
