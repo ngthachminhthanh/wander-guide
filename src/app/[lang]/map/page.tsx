@@ -15,9 +15,9 @@ export default function MapPage() {
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(selectedLocation.mapQuery)}&t=&z=10&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row min-h-[calc(100vh-56px)] mt-14">
+    <div className="flex flex-col-reverse lg:flex-row mt-14 h-auto lg:h-[calc(100vh-56px)]">
         {/* Sidebar */}
-        <div className="w-full lg:w-[400px] bg-card border-r flex flex-col z-20 shadow-xl lg:h-[calc(100vh-56px)] lg:sticky lg:top-14 shrink-0">
+        <div className="w-full lg:w-[400px] bg-card border-r flex flex-col z-20 shadow-xl h-auto lg:h-full shrink-0">
           <div className="p-4 md:p-6 border-b space-y-4 shrink-0">
             <h1 className="text-xl md:text-2xl font-bold flex items-center">
               <Navigation className="mr-2 text-primary" /> {t.map.title}
@@ -28,7 +28,7 @@ export default function MapPage() {
             </div>
           </div>
 
-          <ScrollArea className="flex-grow h-auto max-h-[60vh] lg:max-h-none">
+          <ScrollArea className="flex-grow h-auto max-h-[60vh] lg:max-h-none lg:h-0">
             <div className="p-4 space-y-3">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-2 mb-2">
                 {t.map.suggestedLocations}
@@ -70,7 +70,7 @@ export default function MapPage() {
         </div>
 
         {/* Map Area */}
-        <div className="w-full h-[55vh] lg:h-auto lg:flex-grow relative z-10 bg-muted shrink-0 lg:shrink">
+        <div className="w-full h-[55vh] lg:h-full lg:flex-grow relative z-10 bg-muted shrink-0 lg:shrink">
           <motion.div 
             key={selectedLocation.id}
             initial={{ opacity: 0 }}
