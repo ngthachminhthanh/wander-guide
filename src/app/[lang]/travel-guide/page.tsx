@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/components/providers/i18n-provider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, Plane, Train, Wallet, Utensils, Cloud, ShoppingBag, ShieldAlert } from "lucide-react";
+import { BookOpen, Plane, Train, Wallet, Utensils, Cloud, ShoppingBag, ShieldAlert, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function TravelGuidePage() {
   const { t, locale } = useI18n();
@@ -65,20 +66,7 @@ export default function TravelGuidePage() {
         ja: "無料Wi-Fiは普及してきていますが、場所によっては見つけるのが難しい場合もあります。接続を維持する最良の方法は、ポケットWi-Fiをレンタルするか、空港でトラベルSIM/eSIMを購入するか、配達を事前注文することです。"
       }
     },
-    {
-      id: "food",
-      icon: <Utensils className="w-8 h-8 text-primary" />,
-      title: {
-        vi: "Ẩm thực & Ăn uống",
-        en: "Food & Dining",
-        ja: "食べ物と食事"
-      },
-      content: {
-        vi: "Nhật Bản là thiên đường ẩm thực nhưng có một vài lưu ý quan trọng. Thường bạn sẽ thanh toán tại quầy tính tiền thay vì tại bàn. Không có văn hóa tiền tip (bo). Khi ăn mì ramen, việc húp phát ra tiếng là điều bình thường để tỏ rõ sự ngon miệng.",
-        en: "Japan is a food paradise but there are some important notes. You usually pay at the register instead of at the table. There is no tipping culture. When eating ramen, slurping is perfectly normal and shows appreciation.",
-        ja: "日本は食の楽園ですが、いくつかの重要な注意点があります。通常、テーブルではなくレジで支払います。チップの文化はありません。ラーメンを食べるとき、音を立ててすするのは普通であり、美味しさを表すものです。"
-      }
-    },
+
     {
       id: "shopping",
       icon: <ShoppingBag className="w-8 h-8 text-primary" />,
@@ -163,21 +151,26 @@ export default function TravelGuidePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.1 }}
           >
-            <Card className="overflow-hidden border-border/50 hover:shadow-md transition-shadow">
-              <CardHeader className="flex flex-row items-center gap-4 bg-muted/30 border-b">
-                <div className="p-3 bg-background rounded-full shadow-sm">
-                  {guide.icon}
-                </div>
-                <CardTitle className="text-xl md:text-2xl">
-                  {guide.title[locale as keyof typeof guide.title] || guide.title.vi}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  {guide.content[locale as keyof typeof guide.content] || guide.content.vi}
-                </p>
-              </CardContent>
-            </Card>
+            <Link href={`/${locale}/travel-guide/${guide.id}`} className="block block group">
+              <Card className="overflow-hidden border-border/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader className="flex flex-row items-center gap-4 bg-muted/30 border-b group-hover:bg-primary/5 transition-colors">
+                  <div className="p-3 bg-background rounded-full shadow-sm group-hover:scale-110 transition-transform">
+                    {guide.icon}
+                  </div>
+                  <CardTitle className="text-xl md:text-2xl group-hover:text-primary transition-colors">
+                    {guide.title[locale as keyof typeof guide.title] || guide.title.vi}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 relative">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    {guide.content[locale as keyof typeof guide.content] || guide.content.vi}
+                  </p>
+                  <div className="absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity flex items-center text-primary font-medium">
+                    {locale === 'vi' ? 'Xem chi tiết' : locale === 'ja' ? '詳細を見る' : 'Read more'} <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </motion.div>
         ))}
       </div>

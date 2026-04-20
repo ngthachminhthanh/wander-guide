@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle, NavigationMenuContent, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Map, MapPin, Tent, Menu, X, Home, Compass, Leaf, Palette, Utensils, BookOpen, HelpCircle } from "lucide-react";
+import { Map, MapPin, Tent, Menu, X, Home, Compass, Leaf, Palette, Utensils, BookOpen, HelpCircle, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useI18n } from "@/components/providers/i18n-provider";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
@@ -38,6 +38,7 @@ export function Navbar() {
     { href: `/${locale}/experiences/nature`, label: t.footer?.nature || "Thiên nhiên", icon: <Leaf className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/experiences/culture`, label: t.footer?.culture || "Văn hóa & Nghệ thuật", icon: <Palette className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/experiences/food`, label: t.footer?.food || "Ẩm thực", icon: <Utensils className="mr-2 h-4 w-4" /> },
+    { href: `/${locale}/experiences/festivals`, label: t.footer?.festivals || "Lễ hội & sự kiện", icon: <Sparkles className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/travel-guide`, label: t.footer?.travelGuide || "Cẩm nang du lịch", icon: <BookOpen className="mr-2 h-4 w-4" /> },
     { href: `/${locale}/faq`, label: t.footer?.faq || "Câu hỏi thường gặp", icon: <HelpCircle className="mr-2 h-4 w-4" /> },
   ];

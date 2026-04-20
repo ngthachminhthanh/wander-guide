@@ -6,13 +6,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useI18n } from "@/components/providers/i18n-provider";
 
+import { ReactNode } from "react";
+
 interface ExperienceDetailsProps {
   title: string;
   japaneseTitle: string;
   description: string;
   image: string;
   highlights: string[];
-  content: string;
+  content: ReactNode;
 }
 
 export function ExperienceDetails({ title, japaneseTitle, description, image, highlights, content }: ExperienceDetailsProps) {

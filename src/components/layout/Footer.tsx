@@ -29,6 +29,7 @@ export function Footer() {
             <li><Link href={`/${locale}/experiences/nature`} className="hover:text-white transition">{t.footer?.nature || "Thiên nhiên"}</Link></li>
             <li><Link href={`/${locale}/experiences/culture`} className="hover:text-white transition">{t.footer?.culture || "Văn hóa & Nghệ thuật"}</Link></li>
             <li><Link href={`/${locale}/experiences/food`} className="hover:text-white transition">{t.footer?.food || "Ẩm thực"}</Link></li>
+            <li><Link href={`/${locale}/experiences/festivals`} className="hover:text-white transition">{t.footer?.festivals || "Lễ hội & sự kiện"}</Link></li>
           </ul>
         </div>
 
