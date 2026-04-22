@@ -87,7 +87,7 @@ export const heroSlides: HeroSlide[] = [
   {
     id: 1,
     image: "https://images.unsplash.com/photo-1492571350019-22de08371fd3?q=80&w=2500&auto=format&fit=crop",
-    title: { vi: "Khám Phá Vẽ Đẹp", en: "Discover the Beauty", ja: "美しさを発見する" },
+    title: { vi: "Khám Phá Vẻ Đẹp", en: "Discover the Beauty", ja: "美しさを発見する" },
     subtitle: { vi: "Nhật Bản Mùa Hoa Anh Đào", en: "Japan Through Sakura Season", ja: "桜の季節の日本" }
   },
   {
