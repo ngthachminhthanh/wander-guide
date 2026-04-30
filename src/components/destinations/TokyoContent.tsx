@@ -37,7 +37,7 @@ export function TokyoContent({ locale }: TokyoContentProps) {
             "Shibuya thường được biết đến qua khu thương mại sầm uất chung quanh Nhà ga Shibuya. Đây là một điểm giao thông tấp nập bậc nhất ở Tokyo. Các cửa hiệu ở Shibuya thiên về thời trang giới trẻ nên nghiễm nhiên khu vực này có tiếng là nơi tụ tập đông đảo các dịch vụ may mặc thời trang như thương xá Shibuya 109.",
             "Tính đến hiện tại, khu phố thời trang Shibuya đang nơi sở hữu các cửa hiệu thời trang như: Shibuya PARCO, Cocoti,.. .Đặc biệt, địa điểm du lịch Tokyo này cũng được chọn là nơi tổ chức các sự kiện có liên quan đến thời trang."
           ],
-          image: "https://cdnphoto.dantri.com.vn/qhhu0SzBG8kaiEru3Iu273y-dwk=/thumb_w/990/2021/05/28/2-japan-travel-1622216882367.jpg",
+          image: "https://mia.vn/media/uploads/blog-du-lich/khi-anh-den-chua-bao-gio-tat-tai-shibuya-1682866202.jpg",
           imageTitle: "Khu phố Shibuya"
         },
         {
@@ -160,7 +160,7 @@ export function TokyoContent({ locale }: TokyoContentProps) {
             "Shibuya is often known for its bustling commercial area around Shibuya Station. This is one of the busiest transportation hubs in Tokyo. The shops in Shibuya are geared towards youth fashion, so naturally this area has a reputation as a gathering place for many fashion apparel services such as the Shibuya 109 department store.",
             "Currently, the Shibuya fashion district is home to fashion stores such as: Shibuya PARCO, Cocoti,... In particular, this Tokyo tourist destination is also chosen to host fashion-related events."
           ],
-          image: "https://cdnphoto.dantri.com.vn/qhhu0SzBG8kaiEru3Iu273y-dwk=/thumb_w/990/2021/05/28/2-japan-travel-1622216882367.jpg",
+          image: "https://mia.vn/media/uploads/blog-du-lich/khi-anh-den-chua-bao-gio-tat-tai-shibuya-1682866202.jpg",
           imageTitle: "Shibuya District"
         },
         {
@@ -283,7 +283,7 @@ export function TokyoContent({ locale }: TokyoContentProps) {
             "渋谷は、渋谷駅周辺の賑やかな商業エリアとしてよく知られています。これは東京で最も交通量の多いハブの一つです。渋谷の店舗は若者向けのファッションに重点を置いているため、当然のことながら、このエリアはSHIBUYA109など多くのファッションアパレルサービスが集まる場所として有名です。",
             "現在、渋谷ファッション地区には、渋谷PARCO、Cocotiなどのファッションストアがあります。特に、この東京の観光地はファッション関連のイベントを開催する場所としても選ばれています。"
           ],
-          image: "https://cdnphoto.dantri.com.vn/qhhu0SzBG8kaiEru3Iu273y-dwk=/thumb_w/990/2021/05/28/2-japan-travel-1622216882367.jpg",
+          image: "https://mia.vn/media/uploads/blog-du-lich/khi-anh-den-chua-bao-gio-tat-tai-shibuya-1682866202.jpg",
           imageTitle: "渋谷"
         },
         {
