@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { getDictionary, Locale } from "@/i18n";
 
+import { TokyoContent } from "@/components/destinations/TokyoContent";
+import { KyotoContent } from "@/components/destinations/KyotoContent";
+
 export default async function DestinationPage({
   params,
 }: {
@@ -50,49 +53,58 @@ export default async function DestinationPage({
 
       {/* Main Content */}
       <div className="container mx-auto max-w-7xl px-4 py-16 flex-grow">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          
-          {/* Info column */}
-          <div className="lg:col-span-1 space-y-8">
-            <div className="bg-card rounded-2xl p-6 border shadow-sm">
-              <h3 className="text-xl font-bold mb-4 flex items-center border-b pb-4">
-                <Info className="mr-2 w-5 h-5 text-primary" /> {t.destinations.generalInfo}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {t.destinations.generalInfoDesc}
-              </p>
-              
-              <div className="mt-8">
-                <Button className="w-full h-12 text-lg text-primary-foreground shadow-sm" variant="default" asChild>
-                  <Link href={`/${locale}/map`}>
-                    <Navigation className="mr-2 w-5 h-5" />
-                    {t.destinations.takeMeHere}
-                  </Link>
-                </Button>
+        
+        {id === "tokyo" ? (
+          <div className="mt-8 mb-16">
+            <TokyoContent locale={locale} />
+          </div>
+        ) : id === "kyoto" ? (
+          <div className="mt-8 mb-16">
+            <KyotoContent locale={locale} />
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Info column */}
+            <div className="lg:col-span-1 space-y-8">
+              <div className="bg-card rounded-2xl p-6 border shadow-sm">
+                <h3 className="text-xl font-bold mb-4 flex items-center border-b pb-4">
+                  <Info className="mr-2 w-5 h-5 text-primary" /> {t.destinations.generalInfo}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t.destinations.generalInfoDesc}
+                </p>
+                
+                <div className="mt-8">
+                  <Button className="w-full h-12 text-lg text-primary-foreground shadow-sm" variant="default" asChild>
+                    <Link href={`/${locale}/map`}>
+                      <Navigation className="mr-2 w-5 h-5" />
+                      {t.destinations.takeMeHere}
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Map Column */}
+            <div className="lg:col-span-2">
+              <h2 className="text-3xl font-bold mb-6 flex items-center">
+                <MapPin className="mr-3 w-8 h-8 text-primary" /> {t.destinations.areaMap}
+              </h2>
+              <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-md border border-border/50">
+                <iframe 
+                  src={mapUrl}
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale-[0.1] contrast-[1.05] dark:invert-[0.9] dark:hue-rotate-180"
+                />
               </div>
             </div>
           </div>
-
-          {/* Map Column */}
-          <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold mb-6 flex items-center">
-              <MapPin className="mr-3 w-8 h-8 text-primary" /> {t.destinations.areaMap}
-            </h2>
-            <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-md border border-border/50">
-              <iframe 
-                src={mapUrl}
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale-[0.1] contrast-[1.05] dark:invert-[0.9] dark:hue-rotate-180"
-              />
-            </div>
-          </div>
-
-        </div>
+        )}
       </div>
     </div>
   );

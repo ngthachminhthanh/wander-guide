@@ -15,7 +15,7 @@ export default function MapPage() {
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(selectedLocation.mapQuery)}&t=&z=10&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-14 h-auto lg:h-[calc(100vh-56px)]">
+    <div className="flex flex-col-reverse lg:flex-row mt-14 h-auto lg:h-[calc(100vh-56px)] pb-12 lg:pb-0">
         {/* Sidebar */}
         <div className="w-full lg:w-[400px] bg-card border-r flex flex-col z-20 shadow-xl h-auto lg:h-full shrink-0">
           <div className="p-4 md:p-6 border-b space-y-4 shrink-0">
@@ -29,7 +29,7 @@ export default function MapPage() {
           </div>
 
           <ScrollArea className="flex-grow h-auto max-h-[60vh] lg:max-h-none lg:h-0">
-            <div className="p-4 space-y-3">
+            <div className="p-4 space-y-3 pb-8 lg:pb-4">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-2 mb-2">
                 {t.map.suggestedLocations}
               </p>
@@ -55,18 +55,7 @@ export default function MapPage() {
             </div>
           </ScrollArea>
 
-          <div className="p-4 md:p-6 border-t bg-muted/50 hidden md:block shrink-0">
-            <div className="flex items-center space-x-4 mb-4">
-               <div className="h-10 w-10 md:h-12 md:w-12 shrink-0 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Info className="text-primary w-5 h-5 md:w-6 md:h-6" />
-               </div>
-               <div>
-                  <h4 className="font-bold text-sm">{t.map.routeSuggestion}</h4>
-                  <p className="text-xs text-muted-foreground hidden lg:block">{t.map.routeDesc}</p>
-               </div>
-            </div>
-            <Button className="w-full" variant="outline">{t.map.viewDetails}</Button>
-          </div>
+
         </div>
 
         {/* Map Area */}

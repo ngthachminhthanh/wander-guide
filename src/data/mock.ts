@@ -137,7 +137,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "food",
-    title: { vi: "Ẩm thực & Đồ uống", en: "Food & Drinks", ja: "食べ物と飲み物" },
+    title: { vi: "Ẩm thực", en: "Food", ja: "グルメ" },
     description: {
       vi: "Thưởng thức Ramen, Sushi và văn hóa ẩm thực đường phố đa dạng.",
       en: "Enjoy Ramen, Sushi, and diverse street food culture.",

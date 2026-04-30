@@ -119,7 +119,7 @@ export default function Home() {
       {/* Tinh Hoa Trải Nghiệm Section */}
       <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -128,7 +128,7 @@ export default function Home() {
           >
             {t.home.essenceExperiences}
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -150,10 +150,10 @@ export default function Home() {
             >
               <Link href={`/${locale}${exp.link}`} className="group block relative overflow-hidden rounded-2xl h-96 shadow-sm">
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors z-10" />
-                <img 
-                  src={exp.image} 
-                  alt={exp.title[locale]} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <img
+                  src={exp.image}
+                  alt={exp.title[locale]}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 p-6 z-20 translate-y-4 group-hover:translate-y-0 transition-transform">
                   <h3 className="text-2xl font-bold text-white mb-2">{exp.title[locale]}</h3>
@@ -193,10 +193,10 @@ export default function Home() {
               >
                 <Card className="overflow-hidden bg-card border shadow-sm hover:shadow-xl transition-shadow flex flex-col h-full">
                   <div className="relative h-64 overflow-hidden group shrink-0">
-                    <img 
-                      src={dest.image} 
-                      alt={dest.name[locale]} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    <img
+                      src={dest.image}
+                      alt={dest.name[locale]}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-sm font-medium">
                       {dest.japaneseName}
@@ -204,7 +204,7 @@ export default function Home() {
                   </div>
                   <CardHeader>
                     <CardTitle className="flex items-center text-2xl">
-                      <MapPin className="mr-2 text-primary w-5 h-5" /> 
+                      <MapPin className="mr-2 text-primary w-5 h-5" />
                       {dest.name[locale]}
                     </CardTitle>
                   </CardHeader>
@@ -214,7 +214,7 @@ export default function Home() {
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" className="w-full border-primary/20 hover:bg-primary/5" asChild>
+                    <Button variant="outline" className="w-full border-primary/20 hover:bg-primary/80 bg-primary text-primary-foreground" asChild>
                       <Link href={`/${locale}/destinations/${dest.id}`}>{t.home.exploreNow}</Link>
                     </Button>
                   </CardFooter>

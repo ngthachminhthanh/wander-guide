@@ -8,7 +8,7 @@ export default function FoodPage() {
   const { locale } = useI18n();
 
   const data = {
-    title: { vi: "Ẩm Thực & Đồ Uống", en: "Food & Drinks", ja: "食べ物と飲み物" },
+    title: { vi: "Ẩm thực", en: "Food", ja: "グルメ" },
     japaneseTitle: "和食 - Washoku",
     description: {
       vi: "Thưởng thức tinh hoa ẩm thực từ Sushi thượng hạng đến Ramen vỉa hè đầy lôi cuốn.",
