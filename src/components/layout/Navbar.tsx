@@ -63,10 +63,9 @@ export function Navbar() {
               isSolid ? "text-primary" : "text-white drop-shadow-md"
             )} />
             <span className={cn(
-              "font-bold text-2xl tracking-tight transition-colors",
-              isSolid ? "text-foreground" : "text-white drop-shadow-md"
+              "font-bold text-2xl tracking-tight transition-colors text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#60a5fa] to-primary animate-text-gradient drop-shadow-sm",
             )}>
-              Wander<span className="text-primary">Guide</span>
+              WanderGuide
             </span>
           </Link>
 

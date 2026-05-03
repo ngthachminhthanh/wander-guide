@@ -15,9 +15,9 @@ export default function MapPage() {
   const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(selectedLocation.mapQuery)}&t=&z=10&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <div className="flex flex-col-reverse lg:flex-row mt-14 h-auto lg:h-[calc(100vh-56px)] pb-12 lg:pb-0">
+    <div className="flex flex-col-reverse lg:flex-row mt-14 h-auto lg:h-[calc(100vh-56px)] pb-10 lg:pb-0">
         {/* Sidebar */}
-        <div className="w-full lg:w-[400px] bg-card border-r flex flex-col z-20 shadow-xl h-auto lg:h-full shrink-0">
+        <div className="w-full lg:w-[400px] bg-card lg:border-r flex flex-col z-20 shadow-xl h-auto lg:h-full shrink-0 rounded-b-[2rem] lg:rounded-none mb-6 lg:mb-0">
           <div className="p-4 md:p-6 border-b space-y-4 shrink-0">
             <h1 className="text-xl md:text-2xl font-bold flex items-center">
               <Navigation className="mr-2 text-primary" /> {t.map.title}
@@ -29,7 +29,7 @@ export default function MapPage() {
           </div>
 
           <ScrollArea className="flex-grow h-auto max-h-[60vh] lg:max-h-none lg:h-0">
-            <div className="p-4 space-y-3 pb-8 lg:pb-4">
+            <div className="p-4 space-y-3 pb-16 lg:pb-8">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest px-2 mb-2">
                 {t.map.suggestedLocations}
               </p>

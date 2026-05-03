@@ -7,6 +7,7 @@ import { getDictionary, Locale } from "@/i18n";
 
 import { TokyoContent } from "@/components/destinations/TokyoContent";
 import { KyotoContent } from "@/components/destinations/KyotoContent";
+import { OsakaContent } from "@/components/destinations/OsakaContent";
 
 export default async function DestinationPage({
   params,
@@ -61,6 +62,10 @@ export default async function DestinationPage({
         ) : id === "kyoto" ? (
           <div className="mt-8 mb-16">
             <KyotoContent locale={locale} />
+          </div>
+        ) : id === "osaka" ? (
+          <div className="mt-8 mb-16">
+            <OsakaContent locale={locale} />
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

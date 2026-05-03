@@ -17,9 +17,9 @@ export default function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
@@ -214,7 +214,7 @@ export default function Home() {
                     </p>
                   </CardContent>
                   <CardFooter>
-                    <Button variant="outline" className="w-full border-primary/20 hover:bg-primary/80 bg-primary text-primary-foreground" asChild>
+                    <Button variant="outline" className="w-full border-primary/20 bg-primary hover:bg-primary/80 text-primary-foreground dark:text-white transition-all" asChild>
                       <Link href={`/${locale}/destinations/${dest.id}`}>{t.home.exploreNow}</Link>
                     </Button>
                   </CardFooter>
@@ -240,7 +240,7 @@ export default function Home() {
             <div className="inline-flex items-center justify-center p-4 bg-primary/20 rounded-full mb-6">
               <MapPin className="w-10 h-10 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-6xl font-bold mb-6 text-white tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#60a5fa] to-primary animate-text-gradient drop-shadow-sm">
               {t.home.mapTitle}
             </h2>
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">

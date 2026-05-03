@@ -13,8 +13,8 @@ export function Footer() {
         <div className="space-y-4">
           <Link href={`/${locale}`} className="flex items-center space-x-2">
             <Tent className="h-6 w-6 text-primary" />
-            <span className="font-bold text-xl tracking-tight">
-              Wander<span className="text-primary">Guide</span>
+            <span className="font-bold text-xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-[#60a5fa] to-primary animate-text-gradient">
+              WanderGuide
             </span>
           </Link>
           <p className="text-sm text-gray-400">
